@@ -1,5 +1,4 @@
-﻿using StrategyWPF.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StrategyWPF
+namespace StrategyWPF.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для TestPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TestPage : Page
     {
-        public MainWindow()
+        public TestPage()
         {
             InitializeComponent();
-            NavFr.Navigate(new AuthorizationPage());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }
